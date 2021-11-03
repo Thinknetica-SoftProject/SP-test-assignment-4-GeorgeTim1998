@@ -18,7 +18,6 @@
 
 require 'digest'
 
-puts("Input: ")
 input = gets.chomp() # read input
 index = 1 # initialise first number
 
