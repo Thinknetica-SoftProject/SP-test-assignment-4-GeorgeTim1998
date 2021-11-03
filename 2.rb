@@ -16,3 +16,16 @@
 #
 ## Решение:
 
+require 'digest'
+
+puts("Input: ")
+input = gets.chomp() # read input
+index = 1 # initialise first number
+
+loop do 
+  hash = Digest::MD5.hexdigest(input + index.to_s)
+  break if (hash[0, 5] == '00000')
+  index += 1
+end
+
+puts(index)

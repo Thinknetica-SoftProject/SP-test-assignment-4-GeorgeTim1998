@@ -16,4 +16,13 @@
 #
 ## Решение:
 
+file = File.open('data/4.txt', 'r')
 
+paper = 0 # wrapping paper surface
+for size in file.readlines
+  a, b, c = size.split('x').map(&:to_i).sort #a - length, b - height, c - width
+  paper += 2 * (a * b + a * c + b * c) + a * b
+end
+
+puts(paper)
+file.close() 

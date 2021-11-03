@@ -10,4 +10,13 @@
 #
 ## Решение:
 
+file = File.open('data/3.txt', 'r')
 
+sum = 0
+for code in file.readlines
+  array = code.split("\t").map(&:to_i)  
+  sum += array.max - array.min
+end
+
+puts(sum)
+file.close() 

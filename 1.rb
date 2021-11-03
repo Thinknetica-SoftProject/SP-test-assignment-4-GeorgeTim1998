@@ -16,6 +16,8 @@
 #
 ## Решение:
 
+file = File.open('data/1.txt', 'r')
+text = file.read()
 
-
-
+puts(text.count('(') - text.count(')'))
+file.close
